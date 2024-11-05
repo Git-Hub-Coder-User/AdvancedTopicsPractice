@@ -13,6 +13,7 @@
 #"This car has no engine. It's really awkward" - LaRose
 #"It says vroom vroom" - LaRose
 #"Basically Lightning McQueen" - LaRose
+#"My car, Healty? Lol, no? " - LaRose
 class Car:
     def __init__(self, make, model, year, engine):
         self.make = make

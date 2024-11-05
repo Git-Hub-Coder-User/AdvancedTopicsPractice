@@ -12,6 +12,11 @@
 #"You're getting lost because you're distracted. " - LaRose
 #"The crazy choas" - LaRose
 #"You didn't listen until I sat there and pointed at it"
+#"I'm going insane" - Jonathan
+#"You can't go somewhere you already are" - LaRose
+#"I don't trust my self" - Jonathan "No" - LaRose
+#"What if I'm bipolar? " - Ethan? "Don't" - LaRose
+#"You guys have the attention span of fleas" - LaRose
 from app import App
 from csv import reader
 

@@ -8,6 +8,7 @@ Dog	Name	Breed
 5	Bella	Irish Setter
 Verify that the name and breed of the dogs in the list match the order of the table
 """
+from csv import reader
 
 class Dog:
     def __init__(self, name, breed):
@@ -17,10 +18,12 @@ class Dog:
     def __str__(self):
         return f"{self.name.capitalize()} is a {self.breed}"
 
-listed = [Dog("Marceline", "German Shepherd"), Dog("Cajun", "Belgian Malinois"), Dog("Daisy", "Border Collie"), Dog("Rocky", "Golden Retriever"), Dog("Bella", "Irish Setter")]
 dogs = []
 
-for value in listed:
-    dogs.append(str(value))
+with open('C:\Users\elsa.schultheiss\Downloads\Untitled spreadsheet - Sheet1.csv') as csv_file:
+    csv_reader = reader(csv_file, delimiter=",")
+    next(csv_reader)
+    for name, description, category in csv_reader:
+        dogs.append(Dog(name, breed))
 
 print(dogs)

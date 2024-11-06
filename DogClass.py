@@ -20,10 +20,11 @@ class Dog:
 
 dogs = []
 
-with open('C:\Users\elsa.schultheiss\Downloads\Untitled spreadsheet - Sheet1.csv') as csv_file:
+with open('Dogs - Sheet1.csv') as csv_file:
     csv_reader = reader(csv_file, delimiter=",")
     next(csv_reader)
-    for name, description, category in csv_reader:
+    for name, breed  in csv_reader:
         dogs.append(Dog(name, breed))
 
-print(dogs)
+for dog in dogs:
+    print(dog)

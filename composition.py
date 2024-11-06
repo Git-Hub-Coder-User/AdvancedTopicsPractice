@@ -13,7 +13,7 @@
 #"This car has no engine. It's really awkward" - LaRose
 #"It says vroom vroom" - LaRose
 #"Basically Lightning McQueen" - LaRose
-#"My car, Healty? Lol, no? " - LaRose
+#"My car, Healthy? Lol, no? " - LaRose
 class Car:
     def __init__(self, make, model, year, engine):
         self.make = make
@@ -23,6 +23,10 @@ class Car:
     
     def __str__(self):
         return f"{self.year}, {self.make}, {self.model}"
+    
+    #This method is for other programmers and it is for debugging purposes We want to tell them the class and all attributes
+    def __repr__(self):
+        return f"Car({self.make}, {self.model}, {self.year}, {self.engine})"
 
 class Engine:
     def __init__(self, configuration, displacement, horsepower, torque):
@@ -31,6 +35,12 @@ class Engine:
         self.horsepower = horsepower
         self.torque = torque
     
+    def __str__(self):
+        return f"The engine is a {self.configuration}, with {self.displacement} displacement, {self.horsepower} horsepower, and {self.torque} torque"
+    
+    def __repr__(self):
+        return f"Engine({self.configuration}, {self.displacement}, {self.horsepower}, {self.torque})"
+
     def ignite(self):
         print("Vroom, vroom! ")
 
@@ -41,3 +51,5 @@ myCar = Car("Mazda", "Mazda3", 2013, myEngine)
 print(myCar)
 #To acess a composite class, you have to call that specific item from your class
 myCar.engine.ignite()
+print(repr(myCar))
+print(repr(myEngine))
